@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="stylesheet" href="./css/css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <div class="head">
+            <div class="Background">
+                <div class="head-1">
+                    <h1>陈承榜个人简历</h1>
+                    <hr>
+                <a href="#page-1" class="mdlj wzys">查看更多</a>
+                </div>
+            </div>
+        </div>
+        <div id="page-2"></div>
+        <div class="Background-1" id="page-1">
+            <div class="Top-1">
+                <a href="#" class="wzys" >首页</a>
+                <a href="#page-2" class="wzys" >简介</a>
+                <a href="#page-3" class="wzys" >生活</a>
+            </div>
+        </div>
+        <div class="body">
+            <div class="head-2">
+                <h1>个人简介</h1>
+                <hr>
+                <img src="./img/ccb.png" alt="" class="img-style">
+            </div>
+            <div class="grzl">
+                <ul class="TEXcenter">
+                    <li>
+                        <h5 class="wzys">个人资料</h5>
+                        <div class="personal">
+							<table>
+								<tr>
+									<td>
+										姓名：陈承榜
+									</td>
+									<td>
+										性别：男
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										出生日期：1996.05.07
+									</td>
+									<td>
+										籍贯：浙江温州
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										就读专业：计算机应用
+									</td>
+									<td>
+										学历：大学专科毕业
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										电话：13185982591 
+									</td>
+									<td>
+										邮箱：545960425@qq.com 
+									</td>
+								</tr>
+							</table>
+					    </div>
+                    </li>
+                    <li>
+                        <h5 class="wzys">教育背景</h5>
+                        <div class="personal">
+                            <p>
+                                <span>
+                                    2015.09-2018.07宁波城市职业技术学院
+                                </span>
+                            </p>
+                            <p>主修课程:
+                               
+                            </p>
+                            <span>
+                                办公软件高级应用、数据库技术、WEB前端开发技术、JAVA程序设计
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="wzys">工作经验</h5>
+                        <div class="personal" >
+                            <p>
+                                <span>
+                                    宁波华讯通信实习通信设计助理
+                                </span>
+                            </p>
+                            <p>
+                                <span>
+                                    宁波幕枫网络任网站SEO优化助理
+                                </span>
+                            </p>
+                            <p>
+                                <span>
+                                    宁波启拓电子任新媒体运营主管
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="wzys">职业技能</h5>
+                        <div class="personal"  >
+                            <p>
+                                <span>
+                                    熟悉操作办公软件、熟悉PS、会html+css、Javascript基础、jquery基础
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+         </div>
+
+         <div >
+            <div class="head-1" id="#page-2">
+                <h1 id="page-3">生活</h1>
+                <hr>
+            </div>
+            <div class="sh">
+                <a href="#" onclick="return false;"  class="mdlj-3 wzys shclick" >全部</a>
+                <a href="#" onclick="return false;"  class="mdlj-1 wzys shclick" >工作</a>
+                <a href="#" onclick="return false;"  class="mdlj-1 wzys shclick" >娱乐</a>
+                <div class="zp">
+                    <div class="hove gz">
+                        <img src="./img/gz.jpg" alt="" >
+                    </div>
+                    <div class="hove gz">
+                        <img src="./img/gz1.jpg" alt="" >
+                    </div>
+                    <div class="hove fj">
+                        <img src="./img/gz2.jpg" alt=""  >
+                    </div>
+                    <div class="hove fj">
+                        <img src="./img/fj.jpg" alt=""  >
+                    </div>
+                    <div class="hove osh">
+                        <img src="./img/fj1.jpg" alt="" >
+                    </div>
+                    <div class="hove osh">
+                        <img src="./img/sh.jpg" alt="" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1-cc52697ab1.10.2.js"></script>
+<script type="">
+    	$('ul').on('click','li',function(){
+    
+			$(this).find('.personal').fadeToggle(500);
+				}); 
+
+
+                var dotObj = $('.shclick') ;
+                    dotObj.click(function() {  
+
+                    $('.hove').hide();
+
+
+                    $(dotObj).css({ color: "black", background: "#fff" }); //全部背景变白的字体变黑的
+                    $(this).css({ color: "#fff", background: "black" });    //选中的背景变黑的字体变白的
+                    var indexs = $(this).index();  // 获取下标
+
+                 if(indexs == 1){             //转换下标的字符类型
+                        $(this).siblings().find('.gz').fadeIn("slow");
+                        $(this).siblings().find('.gz').fadeIn(1000);
+                    }
+                    else if(indexs == 2){
+                        $(this).siblings().find('.fj').fadeIn("slow");
+                        $(this).siblings().find('.fj').fadeIn(1000);
+                    }
+                    else if(indexs == 0){
+                        $(this).siblings().find('.osh , .gz , .fj').fadeIn("slow");
+                        $(this).siblings().find('.osh , .gz , .fj').fadeIn(1000);
+                    }
+            });  
+
+           $(window).scroll(function(){
+                // 滚动条距离顶部的距离 大于 670px时
+                if($(window).scrollTop() > 670){
+                    $('.Background-1').css("position","fixed"); // DIV框可悬浮
+                } else{
+                    $('.Background-1').css("position","initial"); // DIV框不可悬浮
+                }
+                });
+</script>
+</html>
